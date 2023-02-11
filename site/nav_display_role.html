@@ -99,6 +99,10 @@
         <a href="contact.html">Contact</a>
     </nav>
 
+    <!-- un ulteriore modo preso da Coursera -->
+    <a href="about.html" id="current"><div> About Us</div></a>
+    <a href="contact.html"><div>Contact</div></a>
+
     <script>
 
         (function(){
@@ -107,6 +111,8 @@
 
 
             const links = document.querySelectorAll('nav a');
+            const divs = document.querySelectorAll('a div');
+
 
             for (let link of links) {
                 link.addEventListener('mouseover', function(evt) {
@@ -114,6 +120,18 @@
                 evt.target.style.backgroundColor = 'silver';
             });
                 link.addEventListener('mouseout', function(evt) {
+                //funzione di deselezione dell'item
+                evt.target.style.backgroundColor = 'white';
+            });
+        }
+
+            for (let div of divs) {
+                
+                div.addEventListener('mouseover', function(evt) {
+                //funzione di selezione item
+                evt.target.style.backgroundColor = 'silver';
+            });
+                div.addEventListener('mouseout', function(evt) {
                 //funzione di deselezione dell'item
                 evt.target.style.backgroundColor = 'white';
             });
