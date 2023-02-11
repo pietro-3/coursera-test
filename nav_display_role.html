@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+
+    <style>
+
+        /* terzo modo di visualizzare i link in verticale: cambiare il display role al valore 
+        'block' per ciascuno di essi */
+        nav a {
+            display: block;
+            width: 200px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- un primo modo di disporre in verticale i link di una barra di navigazione -->
+
+    <!-- <table>
+        <tr>
+            <td>
+                <a href="index.html">WidgetCo Home</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="products.html">Products</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="services.html">Services</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="fun.html">Widgety Fun!</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="support.html">Support</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="about.html" id="current">About Us</a>
+            </td>
+        </tr>        
+        <tr>
+            <td>
+                <a href="contact.html">Contact</a>
+            </td>
+        </tr>
+    </table> -->
+    
+    <!-- secondo modo di visualizzare in verticale i link: metterli separatamente all'interno di un nav -->
+
+    <!-- <nav>
+        <a href="index.html">WidgetCo Home</a>
+    </nav>
+
+    <nav>
+        <a href="products.html">Products</a>
+    </nav>
+
+    <nav>
+        <a href="services.html">Services</a>
+    </nav>
+
+    <nav>
+        <a href="fun.html">Widgety Fun!</a>
+    </nav>
+
+    <nav>
+        <a href="support.html">Support</a>
+    </nav>
+
+    <nav>
+        <a href="about.html" id="current">About Us</a>
+    </nav>
+
+    <nav>
+        <a href="contact.html">Contact</a>
+    </nav> -->
+
+    <nav>
+        <a href="index.html">WidgetCo Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="fun.html">Widgety Fun!</a>
+        <a href="support.html">Support</a>
+        <a href="about.html" id="current">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <script>
+
+        (function(){
+
+            'use strict'
+
+
+            const links = document.querySelectorAll('nav a');
+
+            for (let link of links) {
+                link.addEventListener('mouseover', function(evt) {
+                //funzione di selezione item
+                evt.target.style.backgroundColor = 'silver';
+            });
+                link.addEventListener('mouseout', function(evt) {
+                //funzione di deselezione dell'item
+                evt.target.style.backgroundColor = 'white';
+            });
+        }
+
+
+        })();
+
+    
+    </script>
+</body>
+</html>
+
